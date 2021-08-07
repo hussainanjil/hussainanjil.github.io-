@@ -3,6 +3,8 @@ from django.urls import path
 from hospital import views
 from django.contrib.auth.views import LoginView,LogoutView
 
+from django.views.static import serve 
+from django.conf.urls import url
 
 #-------------FOR ADMIN RELATED URLS
 urlpatterns = [
@@ -104,5 +106,7 @@ urlpatterns +=[
     path('patient-prescription', views.patient_medntest_view,name='patient-prescription'),
     path('patient-testreport', views.patient_testreport_view,name='patient-testreport'),
 
+    url(r'^media/(?P<path>.*)$', serve,{'document_root':       settings.MEDIA_ROOT}), 
+    url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}), 
 
 ]
