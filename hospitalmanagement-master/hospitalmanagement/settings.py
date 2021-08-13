@@ -126,8 +126,8 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS=[STATIC_DIR,]
 
-STATIC_ROOT=os.path.join(BASE_DIR,'static')
-#STATIC_ROOT = "/Users/DELL/Documents/GitHub/hussainanjil.github.io-/hospitalmanagement-master/static/"
+MEDIA_ROOT=os.path.join(BASE_DIR,'static')
+STATIC_ROOT = "/Users/DELL/Documents/GitHub/hussainanjil.github.io-/hospitalmanagement-master/static/"
 
 
 
