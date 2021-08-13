@@ -104,5 +104,7 @@ urlpatterns +=[
     path('patient-prescription', views.patient_medntest_view,name='patient-prescription'),
     path('patient-testreport', views.patient_testreport_view,name='patient-testreport'),
 
+    #url(r'^media/(?P<path>.*)$', serve,{'document_root':settings.MEDIA_ROOT}), 
+    #url(r'^static/(?P<path>.*)$', serve,{'document_root':settings.STATIC_ROOT}), 
 
 ]
